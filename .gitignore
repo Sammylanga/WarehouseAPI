@@ -1,0 +1,13 @@
+bin/
+obj/
+migrations/
+.vscode/
+*.user
+*.suo
+*.cache
+*.log
+*.db
+*.http
+*.sln
+appsettings.json
+secrets.json
