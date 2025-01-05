@@ -101,5 +101,24 @@ namespace WarehouseApi.Services
         {
             return await _context.Products.ToListAsync();
         }
+
+        public async Task CreateWarehouseProductAsync(WarehouseProduct warehouseProduct)
+        {
+            _context.WarehouseProducts.Add(warehouseProduct);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateWarehouseProductAsync(WarehouseProduct warehouseProduct)
+        {
+            _context.WarehouseProducts.Update(warehouseProduct);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteWarehouseProductAsync(WarehouseProduct warehouseProduct)
+        {
+            _context.WarehouseProducts.Remove(warehouseProduct);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }
